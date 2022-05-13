@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vendors List</title>
+</head>
+<body>
+  @using VOTracker.Models;
+
+  <h4>Hi</h4>
+  
+  @* @if(@Model.vendorList.Count == 0)
+  {
+    <h4>No vendors to show! (Come back later.)</h4>
+  }
+  else 
+  {
+    <ul>
+    @foreach(Vendor vendor in @Model.vendorList)
+    {
+      <li>@vendor.name</li>
+      <li>@vendor.description</li>
+    }
+  }
+    </ul> *@
+  
+  <a href="/"><button class="home">Home</button></a>
+  
+</body>
+</html>

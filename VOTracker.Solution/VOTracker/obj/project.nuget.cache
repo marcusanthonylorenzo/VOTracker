@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "415dw+bIpkrMux0Wi4vynSu64PDgnrmUiNXpOOBWfmobDnYyuEqkr1COwrHcLn3vgQM39rFMA5El5SPy8hL0gw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker\\VOTracker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.14\\microsoft.netcore.app.host.win-x64.5.0.14.nupkg.sha512"
+  ],
+  "logs": []
+}
