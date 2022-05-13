@@ -7,20 +7,19 @@ namespace VOTracker.Controllers
   public class OrdersController : Controller
   {
 
-    [HttpGet("/Orders")]
+    [HttpGet("/orders")]
     public ActionResult Index()
-    {
-      List<Order> allOrders = Order.GetAll();
-      return View(allOrders);
-    }
-
-    [HttpGet("/Orders/create")]
-    public ActionResult New()
     {
       return View();
     }
 
-    [HttpPost("/Orders")]
+    [HttpGet("/orders/new")]
+    public ActionResult New()
+    {
+      return View("New");
+    }
+
+    [HttpPost("/orders/new")]
     public ActionResult Create(string orderName, string orderDescription, int price, int date)
     {
       Order myOrder = new Order(orderName, orderDescription, price, date);

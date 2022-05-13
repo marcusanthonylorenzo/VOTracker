@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Vendor Form!</title>
-</head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Vendor Welcome.</title>
+  </head>
   <body>
-    <form class="newVendorForm" action="/vendors" method="post">
-      <input type="text" class="form-control" placeholder="Enter name.">
-      <input type="text" class="form-control" placeholder="Enter description.">
-      <button type="submit" id="newVendorSubmit">Submit</button>
+    <h1>Register a new vendor here:</h1>
+
+    <form action="/vendors" method="post">
+      <input id="vendorName" name="vendorName" type="text" placeholder="Enter vendor name">
+      <button type="submit">Add Vendor</button>
     </form>
-  </body>
+
+    <a href="/vendors">Back to vendor page.</a>
+    <a href="/">Back home</a>
+    
+    </body>
 </html>

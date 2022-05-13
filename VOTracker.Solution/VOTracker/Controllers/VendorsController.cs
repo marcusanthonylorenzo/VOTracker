@@ -9,8 +9,8 @@ namespace VOTracker.Controllers
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      List<Vendor> vendorList = Vendor.GetAll();
-      return View(vendorList);
+      List<Vendor> vendors = new List<Vendor>();
+      return View(vendors);
     }
 
     [HttpGet("/vendors/new")]
@@ -23,7 +23,7 @@ namespace VOTracker.Controllers
     public ActionResult Create(string VendorName)
     {
       Vendor newVendor = new Vendor(VendorName);
-      return RedirectToAction("Index");
+      return RedirectToAction("show");
     }
 
     [HttpGet("/vendors/{id}")]
@@ -31,9 +31,7 @@ namespace VOTracker.Controllers
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vendor selectedVendor = Vendor.Find(id);
-      List<Order> VendorOrders = selectedVendor.Orders;
       model.Add("Vendor", selectedVendor);
-      model.Add("Orders", VendorOrders);
       return View(model);
     }
 

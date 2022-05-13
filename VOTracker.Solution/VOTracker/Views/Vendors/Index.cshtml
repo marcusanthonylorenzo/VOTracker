@@ -10,20 +10,11 @@
 
   <h4>Hi</h4>
   
-  @* @if(@Model.vendorList.Count == 0)
-  {
-    <h4>No vendors to show! (Come back later.)</h4>
-  }
-  else 
-  {
-    <ul>
-    @foreach(Vendor vendor in @Model.vendorList)
-    {
-      <li>@vendor.name</li>
-      <li>@vendor.description</li>
-    }
-  }
-    </ul> *@
+    <form class="newVendorForm" action="/vendors" method="post">
+      <h2>Add a new vendor:</h2>>
+      <input type="text" class="form-control" placeholder="Enter name.">
+      <button type="submit" id="newVendorSubmit">Submit</button>
+    </form>
   
   <a href="/"><button class="home">Home</button></a>
   

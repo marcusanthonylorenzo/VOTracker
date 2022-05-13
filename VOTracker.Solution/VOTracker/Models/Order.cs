@@ -6,17 +6,23 @@ namespace VOTracker.Models
 {
     public class Order
     {
-        public string orderName { get; set; }
-        public string orderDescription { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
         public int price { get; set; }
         public int date { get; set; }
-        private static List<Order> _instances = new List<Order> { };
-        public Order(string orderName, string orderDescription, int price, int date)
+
+        public int Id { get; set; }
+
+        public static List<Order> _instances = new List<Order> {};
+        public Order(string OrderName, string OrderDescription, int Price, int Date)
         {
-            this.orderName = orderName;
-            this.orderDescription = orderDescription;
-            this.price = price;
-            this.date = date;
+            name = OrderName;
+            description = OrderDescription;
+            price = Price;
+            date = Date;
+            _instances.Add(this);
+            Id = _instances.Count;
+
         }
         
         public static List<Order> GetAll()

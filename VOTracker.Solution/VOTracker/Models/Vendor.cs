@@ -8,13 +8,14 @@ namespace VOTracker.Models
         public static List<Vendor> _instances = new List<Vendor> {};
         public string Name { get; set; }
         public int Id { get; }
-        public List<Order> Orders { get; set; }
+        public List<Vendor> vendorList { get; set; }
 
         public Vendor(string VendorName)
         {
             Name = VendorName;
             _instances.Add(this);
-            Orders = new List<Order>{};
+            Id = _instances.Count;
+            List<Vendor> vendorList = new List<Vendor>{};
         }
 
             public static void ClearAll()
@@ -29,12 +30,12 @@ namespace VOTracker.Models
 
             public static Vendor Find(int searchId)
         {
-            return _instances[searchId-1];
+            return _instances[searchId];
         }
 
-            public void AddItem(Order item)
+            public void AddItem(Vendor business)
         {
-            Orders.Add(item);
+            vendorList.Add(business);
         }
     } 
 }
