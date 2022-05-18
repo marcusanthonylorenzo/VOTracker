@@ -9,8 +9,8 @@ namespace VOTracker.Controllers
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      List<Vendor> vendors = new List<Vendor>();
-      return View(vendors);
+      List<Vendor> ListTotalVendors = Vendor.GetAll();
+      return View(ListTotalVendors);
     }
 
     [HttpGet("/vendors/new")]
@@ -19,22 +19,19 @@ namespace VOTracker.Controllers
       return View();
     }
 
-    [HttpPost("/vendors")]
-    public ActionResult Create(string VendorName)
+    [HttpPost("/vendors/new")]
+    public ActionResult Add(string VendorName)
     {
       Vendor newVendor = new Vendor(VendorName);
       return RedirectToAction("show");
     }
 
-    [HttpGet("/vendors/{id}")]
-    public ActionResult Show(int id)
+    [HttpGet("/vendors/show")]
+    public ActionResult Show()
     {
-      Dictionary<string, object> model = new Dictionary<string, object>();
-      Vendor selectedVendor = Vendor.Find(id);
-      model.Add("Vendor", selectedVendor);
-      return View(model);
+      //the arguement passed through is used on the Views pages
+      List<Vendor> ListTotalVendors = Vendor.GetAll();
+      return View(ListTotalVendors);
     }
-
-
   }
 }

@@ -5,37 +5,37 @@ namespace VOTracker.Models
 {
     public class Vendor
     {
-        public static List<Vendor> _instances = new List<Vendor> {};
+        //psuedo-database
+        private static List<Vendor> ListTotalVendors = new List<Vendor> {};
         public string Name { get; set; }
         public int Id { get; }
         public List<Vendor> vendorList { get; set; }
 
+        public List<Order> orderList { get; set; }
+
         public Vendor(string VendorName)
         {
             Name = VendorName;
-            _instances.Add(this);
-            Id = _instances.Count;
-            List<Vendor> vendorList = new List<Vendor>{};
+            ListTotalVendors.Add(this);
+            Id = ListTotalVendors.Count;
         }
-
             public static void ClearAll()
         {
-            _instances.Clear();
+            ListTotalVendors.Clear();
         }
 
             public static List<Vendor> GetAll()
-        {
-            return _instances;
+        {   
+            return ListTotalVendors;
         }
 
+            public void Add(Vendor business)
+        {
+            ListTotalVendors.Add(business);
+        }
             public static Vendor Find(int searchId)
         {
-            return _instances[searchId];
-        }
-
-            public void AddItem(Vendor business)
-        {
-            vendorList.Add(business);
+            return ListTotalVendors[searchId];
         }
     } 
 }

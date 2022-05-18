@@ -10,6 +10,5 @@ namespace VOTracker.Controllers
       {
         return View();
       }
-
     }
 }

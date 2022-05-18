@@ -9,13 +9,13 @@
 <body>
   @using VOTracker.Models;
 
-    @foreach(Vendor vendor in @Model.vendorList)
+  Hi
+      @foreach(Vendor business in Model)
     {
-      <li>@vendor.Name</li>
-      @* <li>@vendor.Orders</li> *@
+      <li>@business.Name</li>
     }
   
-  }
+
 
 </body>
 </html>
