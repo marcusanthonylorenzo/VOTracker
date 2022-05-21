@@ -10,20 +10,27 @@
 @using VOTracker.Models;
 
   <body>
-    <form class="orderForm" action="/orders/new" method="post">
-      <input type="text" class="form-control" placeholder="Enter name.">
-      <input type="text" class="form-control" placeholder="Enter description.">
-      <input type="number" class="form-control" placeholder="Enter price.">
-      <input type="number" class="form-control" placeholder="Enter date.">
-      <select name="vendors">
+    <form class="orderForm" action="/orders/new" method="post" style="
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      width: 15rem;
+      gap: 1rem;
+    ">
+      <input name="orderName" type="text" class="form-control" placeholder="Enter name.">
+      <input name="orderDescription" type="text" class="form-control" placeholder="Enter description.">
+      <input name="price" type="number" class="form-control" placeholder="Enter price.">
+      <input name="date" type="number" class="form-control" placeholder="Enter date.">
+      <select name="vendorNum" name="vendors">
+      <!-- THIS IS AWESOME. Gets list in html and returns all items in List e.g. Vendors and puts them into a dropdown option. -->
 
-    <!-- THIS IS AWESOME. Gets list in html and returns all items in List e.g. Vendors and puts them into a dropdown option. -->
-    @{ List<Vendor> vendors = Vendor.GetAll();
-        @foreach (Vendor vendor in vendors)
-        {
-          <option value="@vendor.Id">@vendor.Name</option>
+      @{ List<Vendor> vendors = Vendor.GetAll();
+          @foreach (Vendor vendor in vendors)
+          {
+            <option name="VendorId" value=@vendor.Id>@vendor.Name</option>
+          }
         }
-      }
+
       </select>
       <button type="submit" id="newOrderSubmit">Submit</button>
     </form>

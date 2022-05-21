@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using VOTracker.Models;
+using System;
 
 namespace VOTracker.Controllers
 {
@@ -22,10 +23,12 @@ namespace VOTracker.Controllers
     }
 
     [HttpPost("/orders/new")]
-    public ActionResult Show(string orderName, string orderDescription, int price, int date)
+    public ActionResult New(string orderName, string orderDescription, int price, int date, int vendorNum)
     {
-      Order myOrder = new Order(orderName, orderDescription, price, date);
+      Order myOrder = new Order(orderName, orderDescription, price, date, vendorNum);
+      Console.WriteLine(Order.AllOrders[0].Name);
       return RedirectToAction("Index");
     }
   }
+
 }

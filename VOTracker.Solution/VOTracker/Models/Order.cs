@@ -13,20 +13,27 @@ namespace VOTracker.Models
 
         public int Id { get; set; }
 
-        public static List<Order> _instances = new List<Order> {};
-        public Order(string OrderName, string OrderDescription, int orderPrice, int orderDate)
+        public int VendorId { get; set; }
+        public static List<Order> AllOrders = new List<Order> {};
+        public Order(string OrderName, string OrderDescription, int orderPrice, int orderDate, int vendId)
         {
             Name = OrderName;
             Description = OrderDescription;
             Price = orderPrice;
             Date = orderDate;
-            _instances.Add(this);
-            Id = _instances.Count;
+            VendorId = vendId;
+            AllOrders.Add(this);
+            Id = AllOrders.Count;
         }
-
         public static List<Order> GetOrders()
         {
-            return _instances;
+            return AllOrders;
+        }
+
+        public static Order SelectOrder(int idOf)
+        {
+            int IdToIndex = idOf - 1;
+            return AllOrders[IdToIndex];
         }
     }
 }
