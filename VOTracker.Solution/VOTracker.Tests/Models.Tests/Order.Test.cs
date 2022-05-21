@@ -12,7 +12,7 @@ namespace VOTracker.Tests
     public void Constructor_CreatesAnOrder_Order()
     {
       Order chickenNuggets = new Order("chicken", "nuggets", 15, 051322);
-      Assert.AreEqual(chickenNuggets.price, 15);
+      Assert.AreEqual(chickenNuggets.Price, 15);
     }
     // [TestMethod]
     // public void Constructor_CreatesAnOrder_Order()

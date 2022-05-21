@@ -6,7 +6,7 @@ namespace VOTracker.Models
     public class Vendor
     {
         //psuedo-database
-        private static List<Vendor> ListTotalVendors = new List<Vendor> {};
+        public static List<Vendor> ListTotalVendors = new List<Vendor> {};
         public string Name { get; set; }
         public int Id { get; }
 

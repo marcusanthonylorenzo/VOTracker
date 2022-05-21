@@ -20,7 +20,20 @@
 
       @foreach(Vendor business in Model)
     {
-      <li><a href="/vendors/show/@business.Id">@business.Name</a></li>
+      <div class="vendorDiv" id="vendor@business.Id" style="margin: 2px; border-style: 1px solid">
+      <ul><a href="/vendors/show/@business.Id">@business.Name</a></ul>
+          <li>Type: @business.Description</li>
+          <li>Vendor Id: @business.Id</li>
+          <li><a href="/vendors/@business.Id/orders">Current Orders</a></li>
+                  @* @if (Model.Vendor.orderList.Count == 0)
+                  {
+                    <li>No orders currently.</li>
+                  } *@
+                  @* @foreach(Order order in Model.business.orderList)
+                  { *@
+                    @* <li>@order</li> *@
+                  @* } *@
+      </div>
     }
   
 
