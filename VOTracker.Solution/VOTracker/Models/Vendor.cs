@@ -9,13 +9,16 @@ namespace VOTracker.Models
         private static List<Vendor> ListTotalVendors = new List<Vendor> {};
         public string Name { get; set; }
         public int Id { get; }
+
+        public string Description { get; set; }
         public List<Vendor> vendorList { get; set; }
 
-        public List<Order> orderList { get; set; }
+        public static List<Order> orderList = new List<Order>{};
 
-        public Vendor(string VendorName)
+        public Vendor(string VendorName, string VendorDescription)
         {
             Name = VendorName;
+            Description = VendorDescription;
             ListTotalVendors.Add(this);
             Id = ListTotalVendors.Count;
         }
@@ -37,5 +40,17 @@ namespace VOTracker.Models
         {
             return ListTotalVendors[searchId];
         }
+
+        public void AddOrder(Order newOrd)
+        {
+            orderList.Add(newOrd);
+            newOrd.Id = orderList.Count;
+        }
+        
+        public static List<Order> GetOrders()
+        {   
+            return orderList;
+        }
+
     } 
 }

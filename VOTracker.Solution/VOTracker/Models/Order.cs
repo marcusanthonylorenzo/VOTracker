@@ -23,5 +23,10 @@ namespace VOTracker.Models
             _instances.Add(this);
             Id = _instances.Count;
         }
+
+        public static List<Order> GetOrders()
+        {
+            return _instances;
+        }
     }
 }

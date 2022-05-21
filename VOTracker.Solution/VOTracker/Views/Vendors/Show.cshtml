@@ -9,10 +9,11 @@
 <body>
   @using VOTracker.Models;
 
-  Hi
+  <h4>List of Vendors:</h4>
+
       @foreach(Vendor business in Model)
     {
-      <li>@business.Name</li>
+      <li><a href="/vendors/show/@business.Id">@business.Name</a></li>
     }
   
 

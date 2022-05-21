@@ -20,7 +20,6 @@ C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\VOTracker.TagHelpers.output.cache
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\VOTracker.RazorCoreGenerate.cache
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Orders\Index.cshtml.g.cs
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Vendors\Index.cshtml.g.cs
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\VOTracker.RazorTargetAssemblyInfo.cache
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\VOTracker.RazorTargetAssemblyInfo.cs
@@ -32,6 +31,6 @@ C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\ref\VOTracker.dll
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\VOTracker.csproj.CopyComplete
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Vendors\Show.cshtml.g.cs
-C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Orders\New.cshtml.g.cs
-C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Orders\Show.cshtml.g.cs
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Vendors\New.cshtml.g.cs
+C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Orders\New.cshtml.g.cs
+C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Orders\OrdersIndex.cshtml.g.cs

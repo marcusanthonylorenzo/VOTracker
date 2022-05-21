@@ -8,8 +8,23 @@
 <body>
   @using VOTracker.Models;
 
-  <h4>Hi</h4>
+  <h2>Hello, welcome to the Vendors main page.</h2>
 
+  <h4>List of Vendors:</h4>
+  
+@if (Model.Count == 0)
+{
+  <h4>No Vendors registered at the moment. Try again later.</h4>
+}
+
+
+      @foreach(Vendor business in Model)
+    {
+      <li><a href="/vendors/show/@business.Id">@business.Name</a></li>
+    }
+  
+
+  <div class="spacer" style="height: 20px"></div>
   <a href="/vendors/new"><button class="newV">Add new vendor</button></a>
   <a href="/"><button class="home">Home</button></a>
   

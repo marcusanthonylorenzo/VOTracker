@@ -20,18 +20,18 @@ namespace VOTracker.Controllers
     }
 
     [HttpPost("/vendors/new")]
-    public ActionResult Add(string VendorName)
+    public ActionResult Add(string VendorName, string VendorDescription)
     {
-      Vendor newVendor = new Vendor(VendorName);
-      return RedirectToAction("show");
+      Vendor newVendor = new Vendor(VendorName, VendorDescription);
+      return RedirectToAction("Index");
     }
 
-    [HttpGet("/vendors/show")]
-    public ActionResult Show()
-    {
-      //the arguement passed through is used on the Views pages
-      List<Vendor> ListTotalVendors = Vendor.GetAll();
-      return View(ListTotalVendors);
-    }
+    // [HttpGet("/vendors/show")]
+    // public ActionResult Show()
+    // {
+    //   //the arguement passed through is used on the Views pages
+    //   List<Vendor> ListTotalVendors = Vendor.GetAll();
+    //   return View(ListTotalVendors);
+    // }
   }
 }
