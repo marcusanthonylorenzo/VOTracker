@@ -10,11 +10,16 @@
     <form action="/vendors/new" method="post">
       <input id="vendorName" name="vendorName" type="text" placeholder="Enter vendor name">
       <input id="vendorDescription" name="vendorDescription" type="text" placeholder="Enter vendor description.">
+      <input id="MainProduct" name="MainProduct" type="text" placeholder="Enter main product offering.">
       <button type="submit">Add Vendor</button>
     </form>
 
-    <a href="/vendors">Back to vendor page.</a>
-    <a href="/">Back home</a>
+    
+    <div class="spacer" style="height: 20px"></div>
+
+    <a href="/orders"><button>Go To Orders Page</button></a>
+    <a href="/vendors"><button>Back to Vendor Page</button></a>
+    <a href="/"><button class="home">Home</button></a>
 
     </body>
 </html>

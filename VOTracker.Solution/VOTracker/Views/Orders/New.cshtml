@@ -14,26 +14,33 @@
       display: flex;
       flex-direction: column;
       margin: auto;
+      margin-top: 5vh;
       width: 15rem;
       gap: 1rem;
     ">
-      <input name="orderName" type="text" class="form-control" placeholder="Enter name.">
-      <input name="orderDescription" type="text" class="form-control" placeholder="Enter description.">
-      <input name="price" type="number" class="form-control" placeholder="Enter price.">
-      <input name="date" type="number" class="form-control" placeholder="Enter date.">
+      
+      <label for="vendors">Select a vendor:</label>
       <select name="vendorNum" name="vendors">
-      <!-- THIS IS AWESOME. Gets list in html and returns all items in List e.g. Vendors and puts them into a dropdown option. -->
 
+      <!-- THIS IS AWESOME. Gets list in html and returns all items in List e.g. Vendors and puts them into a dropdown option. -->
+      
       @{ List<Vendor> vendors = Vendor.GetAll();
           @foreach (Vendor vendor in vendors)
           {
+            <!-- Add if statement if vendor.Product includes order.Name make an option value -->
             <option name="VendorId" value=@vendor.Id>@vendor.Name</option>
           }
         }
 
       </select>
+      <input name="orderName" type="text" class="form-control" placeholder="Enter name.">
+      <input name="orderDescription" type="text" class="form-control" placeholder="Enter description.">
+      <input name="price" type="number" class="form-control" placeholder="Enter price.">
+      <input name="date" type="number" class="form-control" placeholder="Enter date.">
       <button type="submit" id="newOrderSubmit">Submit</button>
     </form>
 
+    <a href="/orders"><button>Go To Orders Page</button></a>
+    
   </body>
 </html>

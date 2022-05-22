@@ -11,7 +11,7 @@ namespace VOTracker.Tests
     [TestMethod]
     public void Constructor_CreateNewVendor_Vendor()
     {
-      Vendor newVendor = new Vendor("Maki", "cups");
+      Vendor newVendor = new Vendor("Maki", "cups", "cups");
       Assert.AreEqual(newVendor.Name, "Maki");
     }
     [TestMethod]
@@ -23,13 +23,20 @@ namespace VOTracker.Tests
     [TestMethod]
     public void GetAll_ListCountEqualsTwo_List()
     {
-      Vendor maki = new Vendor("Maki", "beer");
-      Vendor naomes = new Vendor("Naomi", "plants");
+      Vendor maki = new Vendor("Maki", "beer", "craft beer");
+      Vendor naomes = new Vendor("Naomi", "plants", "");
       List<Vendor> newList = new List<Vendor> {maki, naomes};
 
       List<Vendor> listSummary = Vendor.GetAll();
       //will count test instances above so 1+2;
       Assert.AreEqual(listSummary.Count,3);
     }
+
+    //     [TestMethod]
+    // public void Constructor_CreateNewVendor_Vendor()
+    // {
+    //   Vendor newVendor = new Vendor("Maki", "cups");
+    //   Assert.AreEqual(newVendor.Name, "Maki");
+    // }
   }
 }

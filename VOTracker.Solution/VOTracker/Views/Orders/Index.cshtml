@@ -7,26 +7,52 @@
 <body>
 @using VOTracker.Models;
 
-  <h4>Hi</h4>
-  
-@if (Model.Count == 0)
-{
-  <h4>Start your order below!</h4>
+@{
+
+  <h4>Welcome to the Ordering portal.</h4>
+
+  @if (Vendor.ListTotalVendors.Count == 0)
+  {
+
+    <h4>I'm sorry: there are no vendors to supply orders. Please go to the Vendors Page and provide a Vendor before making an order.</h4>
+
+    <a href="/vendors/new"><button class="newV">Add new vendor</button></a>
+    <a href="/vendors"><button>Go to Vendor Page</button></a>
+    <a href="/"><button class="home">Home</button></a>
+
+  }
+  else if (Model.Count == 0)
+  {
+
+    <h4>Start your order below!</h4>
+
+    <a href="/orders/new"><button class="order">Make an order now.</button></a>
+    <a href="/vendors"><button>Go to Vendor Page</button></a>
+    <a href="/"><button class="home">Home</button></a>
+
+  }
+  else
+  {
+        @foreach(Order order in Model)
+      {
+        <div class="vendorDiv" id="@order.Id" style="margin: 2px; border-style: 1px solid">
+         <ul>
+             <h4>@order.Name</h4>
+              <li>Type: @order.Description</li>
+              <li>Order Id: @order.Id</li>
+
+              <!-- Get list of vendors and use SelectVendor to match the order.VendorId to the vendor.Id, and abstract the vendor.Name -->
+              @{ Vendor vend = Vendor.SelectVendor(order.VendorId);
+                <li>Vendor: @vend.Name</li>
+              }
+          </ul>
+        </div>
+      }
+
+    <a href="/orders/new"><button class="order">Make an order now.</button></a>
+    <a href="/vendors"><button>Go to Vendor Page</button></a>
+    <a href="/"><button class="home">Home</button></a>
+  }
 }
-
-
-      @foreach(Order order in Model)
-    {
-      <div class="vendorDiv" id="@order.Id" style="margin: 2px; border-style: 1px solid">
-      <ul><a href="/vendors/show/@order.Id">@order.Name</a></ul>
-          <li>Type: @order.Description</li>
-          <li>Order Id: @order.Id</li>
-          <li>Vendor: @order.VendorId</li>
-      </div>
-    }
-
-  <a href="/orders/new"><button class="order">Make an order now.</button></a>
-  <a href="/"><button class="home">Home</button></a>
-  
 </body>
 </html>

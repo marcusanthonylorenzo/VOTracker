@@ -7,7 +7,6 @@ namespace VOTracker.Controllers
 {
   public class OrdersController : Controller
   {
-    // Vendor currentVendor = new Vendor();
 
     [HttpGet("/orders")]
     public ActionResult Index()
@@ -26,7 +25,6 @@ namespace VOTracker.Controllers
     public ActionResult New(string orderName, string orderDescription, int price, int date, int vendorNum)
     {
       Order myOrder = new Order(orderName, orderDescription, price, date, vendorNum);
-      Console.WriteLine(Order.AllOrders[0].Name);
       return RedirectToAction("Index");
     }
   }

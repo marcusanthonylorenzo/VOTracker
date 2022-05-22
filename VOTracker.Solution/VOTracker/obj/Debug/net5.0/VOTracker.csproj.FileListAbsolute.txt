@@ -30,7 +30,6 @@ C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\VOTracker.genruntimeconfig.cache
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\ref\VOTracker.dll
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\VOTracker.csproj.CopyComplete
-C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Vendors\Show.cshtml.g.cs
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Vendors\New.cshtml.g.cs
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Orders\New.cshtml.g.cs
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker\obj\Debug\net5.0\Razor\Views\Orders\Index.cshtml.g.cs

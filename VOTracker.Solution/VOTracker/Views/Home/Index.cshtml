@@ -4,8 +4,18 @@
     <title>Track your Vendors and Orders</title>
   </head>
   <body>
-    <h1>Find your vendor and product today!</h1>
-    <a href="/vendors"><button class="buttons">View Vendors.</button></a>
+  @using System;
+  @{
+    
+    <h1>Welcome to Pierre's Online Order/Supplier Tracking System.</h1>
+      DateTime timestamp = DateTime.Now;
+      <h4>Log-in: @timestamp</h4>
+
+      <h4>Select a task below!</h4>
+
     <a href="/orders"><button>Go To Orders Page</button></a>
+    <a href="/vendors"><button class="buttons">View Vendors.</button></a>
+
+  }
   </body>
 </html>

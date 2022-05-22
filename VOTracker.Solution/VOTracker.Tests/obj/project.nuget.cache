@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RCsyrl5dzzjEbqbrGUL3d2lhqZtk/6YUCoMNibYjcrME4TQX6/fVmP/I3rkAQHn4xbHgREHi6iTRkqirR+kJJQ==",
+  "dgSpecHash": "x1/yi6ud1c6NjSsOJbt4hnoru8RlGe6a2Zt5KtuhkG699xuGcKXOmMpAL133Cxct/+3nBbEx4vqFg5w8gUhIfQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker.Tests\\VOTracker.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker.Tests\\VOTracker.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.codecoverage\\15.9.0\\microsoft.codecoverage.15.9.0.nupkg.sha512",
     "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

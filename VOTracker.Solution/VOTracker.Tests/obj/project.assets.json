@@ -6923,11 +6923,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker.Tests\\VOTracker.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker.Tests\\VOTracker.Tests.csproj",
       "projectName": "VOTracker.Tests",
-      "projectPath": "c:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker.Tests\\VOTracker.Tests.csproj",
+      "projectPath": "C:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker.Tests\\VOTracker.Tests.csproj",
       "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker.Tests\\obj\\",
+      "outputPath": "C:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -6948,8 +6948,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "c:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker\\VOTracker.csproj": {
-              "projectPath": "c:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker\\VOTracker.csproj"
+            "C:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker\\VOTracker.csproj": {
+              "projectPath": "C:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker\\VOTracker.csproj"
             }
           }
         }
