@@ -27,6 +27,13 @@ namespace VOTracker.Controllers
       Order myOrder = new Order(orderName, orderDescription, price, date, vendorNum);
       return RedirectToAction("Index");
     }
+
+    [HttpGet("/orders/show/{id}")]
+    public ActionResult Show(int id)
+    {
+      Order getAnOrder = Order.SelectOrder(id);
+      return View(getAnOrder);
+    }
   }
 
 }

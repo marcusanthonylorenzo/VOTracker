@@ -34,21 +34,19 @@
   }
   else
   {
-        @foreach(Order order in Model)
+      @foreach(Order order in Model)
       {
-        <div class="vendorDiv" id="@order.Id" style="margin: 2px; border-style: 1px solid">
-         <ul>
-             <h4>@order.Name</h4>
-              <li>Type: @order.Description</li>
-              <li>Order Id: @order.Id</li>
-
-              <!-- Get list of vendors and use SelectVendor to match the order.VendorId to the vendor.Id, and abstract the vendor.Name -->
-              @{ Vendor vend = Vendor.SelectVendor(order.VendorId);
-                <li>Vendor: @vend.Name</li>
-              }
-          </ul>
+        <div class="orderDiv" id="@order.Id" style="margin: 1px; border-style: 1px solid;">
+             <ul><a href="/orders/show/@order.Id">@order.Name</a> - Id: @order.Id
+                <!-- Get list of vendors and use SelectVendor to match the order.VendorId to the vendor.Id, and abstract the vendor.Name -->
+                @{ Vendor vend = Vendor.SelectVendor(order.VendorId);
+                  <li style="list-style: none;">Vendor: @vend.Name</li>
+                }
+              </ul>
         </div>
       }
+
+    <div class="spacer" style="height: 20px"></div>
 
     <a href="/orders/new"><button class="order">Make an order now.</button></a>
     <a href="/vendors"><button>Go to Vendor Page</button></a>

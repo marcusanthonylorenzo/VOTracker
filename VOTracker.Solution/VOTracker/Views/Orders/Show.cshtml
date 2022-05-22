@@ -1,0 +1,28 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modeling Page</title>
+  <link href="~/css/styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+@using VOTracker.Models;
+
+@{
+
+    <div class="vendorDiv" id="@Model.Id" style="margin: 2px; bModel-style: 1px solid">
+         <ul>
+             <h4>@Model.Name</h4>
+              <li>Type: @Model.Description</li>
+              <li>Model Id: @Model.Id</li>
+
+              <!-- Get list of vendors and use SelectVendor to match the Model.VendorId to the vendor.Id, and abstract the vendor.Name -->
+              @{ Vendor vend = Vendor.SelectVendor(Model.VendorId);
+                <li>Vendor: @vend.Name</li>
+              }
+          </ul>
+        </div>
+
+}
+</body>
+</html>

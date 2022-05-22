@@ -5,15 +5,22 @@
     <link href="~/css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-  @using System;
+  @using VOTracker.Models;
   @{
     
     <h1>Welcome to Pierre's Online Order/Supplier Tracking System.</h1>
       DateTime timestamp = DateTime.Now;
-      <h4>Log-in: @timestamp</h4>
+      <h4>Logged-in at: @timestamp</h4>
 
       <h4>Select a task below!</h4>
 
+      @if (Vendor.ListTotalVendors.Count > 0)
+      {
+          <h4>Vendors available: @Vendor.ListTotalVendors.Count</h4>
+      }
+
+    <div class="spacer" style="height: 20px"></div>
+    
     <a href="/orders"><button>Go To Orders Page</button></a>
     <a href="/vendors"><button class="buttons">View Vendors.</button></a>
 
