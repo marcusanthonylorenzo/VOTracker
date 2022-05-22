@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>New Vendor Welcome.</title>
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <h1>Register a new vendor here:</h1>
 
-    <form action="/vendors/new" method="post">
+    <form action="/vendors/new" method="post" id="newVendorForm">
       <input id="vendorName" name="vendorName" type="text" placeholder="Enter vendor name">
       <input id="vendorDescription" name="vendorDescription" type="text" placeholder="Enter vendor description.">
       <input id="MainProduct" name="MainProduct" type="text" placeholder="Enter main product offering.">
@@ -21,5 +22,5 @@
     <a href="/vendors"><button>Back to Vendor Page</button></a>
     <a href="/"><button class="home">Home</button></a>
 
-    </body>
+  </body>
 </html>

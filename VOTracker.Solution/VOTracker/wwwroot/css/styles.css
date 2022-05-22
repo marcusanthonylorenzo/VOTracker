@@ -1,0 +1,19 @@
+body {
+  margin: auto;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+}
+
+h1 {
+  text-align: center;
+}
+
+#newVendorForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

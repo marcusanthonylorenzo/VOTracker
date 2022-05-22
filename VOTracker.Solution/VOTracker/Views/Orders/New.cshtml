@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Orders Homepage</title>
+  <link href="~/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 
 @using VOTracker.Models;
@@ -23,7 +24,7 @@
       <select name="vendorNum" name="vendors">
 
       <!-- THIS IS AWESOME. Gets list in html and returns all items in List e.g. Vendors and puts them into a dropdown option. -->
-      
+
       @{ List<Vendor> vendors = Vendor.GetAll();
           @foreach (Vendor vendor in vendors)
           {

@@ -7,61 +7,49 @@
   <link href="~/css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
 @using VOTracker.Models;
 
-  <h2>Hello, welcome to the Vendors main page.</h2>
+  <h2>Vendor:</h2>
 
-  <h4>List of Vendors:</h4>
-  
-@if (Model.Count == 0)
-{
-  <h4>No Vendors registered at the moment. Try again later.</h4>
-
-  <div class="spacer" style="height: 20px"></div>
-
-  <a href="/vendors/new"><button class="newV">Add new vendor</button></a>
-  <a href="/"><button class="home">Home</button></a>
-}
-else
-{ 
     <div class="vendorsDisplay">
-    <ul>
-    @foreach(Vendor business in Model)
-    {
-      <div class="vendorDiv" id="vendor@business.Id" style="margin: 5px; border-style: 1px solid">
-          <ul><a href="/vendors/show/@business.Id">@business.Name</a> - Id: @business.Id 
-
-          @{ List<Order> specificOrders = Order.GetOrders();
-          <li>Current Number of Orders: @specificOrders.Count</li>
-          }
-          </ul>
-      </div>
+    
+     @{
+    
+      <div class="vendorDiv" id="vendor@Model.Id" style="margin: 5px; border-style: 1px solid">
+      <ul><h4><a href="/vendors/show/@Model.Id">@Model.Name</a></h4>
+          <li>Type: @Model.Description</li>
+          <li>Vendor Id: @Model.Id</li>
+          <li>Main Product: @Model.HeroProduct</li>
+          <li>Current Orders:<ul>
 
           <!-- 05/21/22: Use C# in the HTML doc, use methods to grab lists, use loop to write each item in their own div below-->
-@* 
-                  @{ 
+
+                  @{List<Order> specificOrders = Order.GetOrders();
 
                     @foreach(Order item in specificOrders)
                     {
 
-                      @if (item.VendorId == business.Id)
+                      @if (item.VendorId == Model.Id)
                       {
                         <div class="ordersUnderVendor" style="margin-bottom: 3px;">
                           <li>Order name: @item.Name, Order ID: @item.Id</li>
                         </div>
                       }
                     }
-                  } *@
-              
-      }
+                  }
+              </ul>
+          </li>
         </ul>
       </div>
+     }
+    </div>
 
   <div class="spacer" style="height: 20px"></div>
 
   <a href="/orders"><button>Go To Orders Page</button></a>
   <a href="/vendors/new"><button class="newV">Add new vendor</button></a>
   <a href="/"><button class="home">Home</button></a>
-}
+
 </body>
 </html>

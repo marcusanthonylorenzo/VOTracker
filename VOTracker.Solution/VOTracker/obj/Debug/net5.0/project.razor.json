@@ -15624,6 +15624,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker\\Views\\Vendors\\Show.cshtml",
+      "TargetPath": "Views\\Vendors\\Show.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Marcus\\Desktop\\VOTracker\\VOTracker.Solution\\VOTracker\\Views\\Orders\\Index.cshtml",
       "TargetPath": "Views\\Orders\\Index.cshtml",
       "FileKind": "mvc"

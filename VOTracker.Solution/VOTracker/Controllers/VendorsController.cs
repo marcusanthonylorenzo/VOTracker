@@ -23,7 +23,14 @@ namespace VOTracker.Controllers
     public ActionResult Add(string VendorName, string VendorDescription, string MainProduct)
     {
       Vendor newVendor = new Vendor(VendorName, VendorDescription, MainProduct);
-      return RedirectToAction("Index");
+      return RedirectToAction("Index", "Home");
+    }
+
+    [HttpGet("/vendors/show/{id}")]
+    public ActionResult Show(int id)
+    {
+      Vendor business = Vendor.SelectVendor(id);
+      return View(business);
     }
   }
 }

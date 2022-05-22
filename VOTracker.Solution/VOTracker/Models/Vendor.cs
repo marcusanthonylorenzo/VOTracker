@@ -45,17 +45,11 @@ namespace VOTracker.Models
             return ListTotalVendors[IdToIndexVendor];
         }
 
-
         //Get list of string name products, match with Order.Name, if match, print option values in Orders/New
         public static List<string> GetHeroProducts()
         {
             return HeroProducts;
         }
-
-        // public static string CheckNames(Order passedOrder)
-        // {
-        //     if (passedOrder.Name == .Name)
-        // }
 
     } 
 }
