@@ -20,9 +20,9 @@ namespace VOTracker.Controllers
     }
 
     [HttpPost("/vendors/new")]
-    public ActionResult Add(string VendorName, string VendorDescription, string MainProduct)
+    public ActionResult Add(string VendorName, string VendorDescription)
     {
-      Vendor newVendor = new Vendor(VendorName, VendorDescription, MainProduct);
+      Vendor newVendor = new Vendor(VendorName, VendorDescription);
       return RedirectToAction("Index", "Home");
     }
 

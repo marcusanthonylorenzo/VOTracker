@@ -14,13 +14,12 @@
 
     <div class="vendorsDisplay">
     
-     @{
+    @{
     
       <div class="vendorDiv" id="vendor@Model.Id" style="margin: 5px; border-style: 1px solid">
       <ul><h2>@Model.Name</h2>
-          <li>Type: @Model.Description</li>
+          <li>Description: @Model.Description</li>
           <li>Vendor Id: @Model.Id</li>
-          <li>Main Product: @Model.HeroProduct</li>
           <li>Current Orders:<ul>
 
           <!-- 05/21/22: Use C# in the HTML doc, use methods to grab lists, use loop to write each item in their own div below-->
@@ -33,7 +32,7 @@
                       @if (item.VendorId == Model.Id)
                       {
                         <div class="ordersUnderVendor" style="margin-bottom: 3px;">
-                          <li>Order name: @item.Name, Order ID: @item.Id</li>
+                          <li>Order name: <a href="~/orders/show/@item.Id">@item.Name</a>, Order ID: @item.Id</li>
                         </div>
                       }
                     }
@@ -42,7 +41,7 @@
           </li>
         </ul>
       </div>
-     }
+      }
     </div>
 
   <div class="spacer" style="height: 20px"></div>

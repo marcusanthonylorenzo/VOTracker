@@ -9,14 +9,15 @@
 @using VOTracker.Models;
 
 @{
+    DateTime timestamp = DateTime.Now;
 
     <div class="vendorDiv" id="@Model.Id" style="margin: 2px; bModel-style: 1px solid">
         <ul>
-             <h4>@Model.Name</h4>
+              <h4>@Model.Name</h4>
               <li>Description: @Model.Description</li>
               <li>Order Id: @Model.Id</li>
               <li>Price: @Model.Price</li>
-              <li>Order Date: @Model.Date</li>
+              <li>Order Date: @timestamp</li>
 
               <!-- Get list of vendors and use SelectVendor to match the Model.VendorId to the vendor.Id, and abstract the vendor.Name -->
               @{ Vendor vend = Vendor.SelectVendor(Model.VendorId);

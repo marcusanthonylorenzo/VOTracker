@@ -11,13 +11,13 @@ namespace VOTracker.Tests
     [TestMethod]
     public void Constructor_CreatesAnOrder_Order()
     {
-      Order chickenNuggets = new Order("Maki", "nuggets", 15, 051322, 1);
+      Order chickenNuggets = new Order("Maki", "nuggets", 15, "051322", 1);
       Assert.AreEqual(chickenNuggets.Price, 15);
     }
     [TestMethod]
     public void GetOrders_FetchesACountOfTwo_Order()
     {
-      Order chickenNuggets = new Order("chicken", "nuggets again", 15, 051322, 2);
+      Order chickenNuggets = new Order("chicken", "nuggets again", 15, "051322", 2);
       Assert.AreEqual(Order.AllOrders.Count, 2);
     }
 

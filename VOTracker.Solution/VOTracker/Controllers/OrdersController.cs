@@ -22,7 +22,7 @@ namespace VOTracker.Controllers
     }
 
     [HttpPost("/orders/new")]
-    public ActionResult New(string orderName, string orderDescription, int price, int date, int vendorNum)
+    public ActionResult New(string orderName, string orderDescription, int price, string date, int vendorNum)
     {
       Order myOrder = new Order(orderName, orderDescription, price, date, vendorNum);
       return RedirectToAction("Index");

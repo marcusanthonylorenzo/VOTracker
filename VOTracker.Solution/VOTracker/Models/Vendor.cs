@@ -9,20 +9,16 @@ namespace VOTracker.Models
         public static List<Vendor> ListTotalVendors = new List<Vendor> {};
         public string Name { get; set; }
         public int Id { get; }
-
-        public string HeroProduct { get; set; }
         public string Description { get; set; }
         public List<Vendor> vendorList { get; set; }
 
-        public static List<string> HeroProducts = new List<string>{};
+        public static List<Order> Products = new List<Order>{};
 
-        public Vendor(string VendorName, string VendorDescription, string HeroProductName)
+        public Vendor(string VendorName, string VendorDescription)
         {
             Name = VendorName;
             Description = VendorDescription;
-            HeroProduct = HeroProductName;
             ListTotalVendors.Add(this);
-            HeroProducts.Add(HeroProductName);
             Id = ListTotalVendors.Count;
         }
         public static void ClearAll()
@@ -35,7 +31,7 @@ namespace VOTracker.Models
             return ListTotalVendors;
         }
 
-            public void Add(Vendor business)
+        public void Add(Vendor business)
         {
             ListTotalVendors.Add(business);
         }
@@ -46,9 +42,13 @@ namespace VOTracker.Models
         }
 
         //Get list of string name products, match with Order.Name, if match, print option values in Orders/New
-        public static List<string> GetHeroProducts()
+        public static void AddProduct(Order orderProduct)
         {
-            return HeroProducts;
+            Products.Add(orderProduct);
+        }   
+        public static List<Order> GetHeroProducts()
+        {
+            return Products;
         }
 
     } 
