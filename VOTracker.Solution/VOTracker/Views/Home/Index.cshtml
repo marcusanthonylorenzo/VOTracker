@@ -8,22 +8,26 @@
   @using VOTracker.Models;
   @{
     
-    <h1>Welcome to Pierre's Online Order/Supplier Tracking System.</h1>
+      <h1 style="margin-bottom: 0.5rem;">Welcome to Pierre's Online Order/Supplier Tracking System.</h1>
       DateTime timestamp = DateTime.Now;
       <h4>Logged-in at: @timestamp</h4>
 
-      <h4>Select a task below!</h4>
+      @if (Vendor.ListTotalVendors.Count == 0)
+      {
+          <h4>Select a task below!</h4>
+          
+          <div class="spacer" style="height: 20px"></div>
+          <a href="/vendors"><button class="buttons">Go To Vendors Page</button></a>
 
-      @if (Vendor.ListTotalVendors.Count > 0)
+      }
+      else
       {
           <h4>Vendors available: @Vendor.ListTotalVendors.Count</h4>
+          <a href="/vendors"><button class="buttons">View Vendors</button></a>
+          
+          <div class="spacer" style="height: 20px"></div>
+          <a href="/orders"><button>Go To Orders Page</button></a> 
       }
-
-    <div class="spacer" style="height: 20px"></div>
-    
-    <a href="/orders"><button>Go To Orders Page</button></a>
-    <a href="/vendors"><button class="buttons">View Vendors.</button></a>
-
   }
   </body>
 </html>

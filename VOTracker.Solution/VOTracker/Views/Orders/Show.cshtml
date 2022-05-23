@@ -11,17 +11,23 @@
 @{
 
     <div class="vendorDiv" id="@Model.Id" style="margin: 2px; bModel-style: 1px solid">
-         <ul>
+        <ul>
              <h4>@Model.Name</h4>
-              <li>Type: @Model.Description</li>
-              <li>Model Id: @Model.Id</li>
+              <li>Description: @Model.Description</li>
+              <li>Order Id: @Model.Id</li>
+              <li>Price: @Model.Price</li>
+              <li>Order Date: @Model.Date</li>
 
               <!-- Get list of vendors and use SelectVendor to match the Model.VendorId to the vendor.Id, and abstract the vendor.Name -->
               @{ Vendor vend = Vendor.SelectVendor(Model.VendorId);
-                <li>Vendor: @vend.Name</li>
+                <li>Vendor: <a href="/vendors/show/@Model.VendorId">@vend.Name</a></li>
               }
-          </ul>
-        </div>
+        </ul>
+    </div>
+
+    <div class="spacer" style="height: 20px"></div>
+    <a href="/orders"><button>Go To Orders Page</button></a>
+    <a href="/"><button class="home">Home</button></a>
 
 }
 </body>

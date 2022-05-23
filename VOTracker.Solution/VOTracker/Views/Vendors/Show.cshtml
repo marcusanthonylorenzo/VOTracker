@@ -17,7 +17,7 @@
      @{
     
       <div class="vendorDiv" id="vendor@Model.Id" style="margin: 5px; border-style: 1px solid">
-      <ul><h4><a href="/vendors/show/@Model.Id">@Model.Name</a></h4>
+      <ul><h2>@Model.Name</h2>
           <li>Type: @Model.Description</li>
           <li>Vendor Id: @Model.Id</li>
           <li>Main Product: @Model.HeroProduct</li>
@@ -48,6 +48,7 @@
   <div class="spacer" style="height: 20px"></div>
 
   <a href="/orders"><button>Go To Orders Page</button></a>
+  <a href="/vendors"><button>Go to Vendor Page</button></a>
   <a href="/vendors/new"><button class="newV">Add new vendor</button></a>
   <a href="/"><button class="home">Home</button></a>
 

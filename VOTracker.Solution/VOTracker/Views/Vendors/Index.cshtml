@@ -11,11 +11,11 @@
 
   <h2>Hello, welcome to the Vendors main page.</h2>
 
-  <h4>List of Vendors:</h4>
+  <h3>List of Vendors:</h3>
   
 @if (Model.Count == 0)
 {
-  <h4>No Vendors registered at the moment. Try again later.</h4>
+  <h3>No Vendors registered at the moment. Please register a vendor now.</h3>
 
   <div class="spacer" style="height: 20px"></div>
 
@@ -26,41 +26,24 @@ else
 { 
     <div class="vendorsDisplay">
     <ul>
-    @foreach(Vendor business in Model)
-    {
-      <div class="vendorDiv" id="vendor@business.Id" style="margin: 5px; border-style: 1px solid">
-          <ul><a href="/vendors/show/@business.Id">@business.Name</a> - Id: @business.Id 
+        @foreach(Vendor business in Model)
+        {
+          <div class="vendorDiv" id="vendorDivSummary" style="margin-bottom: 5px; list-style: none;">
+              <li><a href="/vendors/show/@business.Id">@business.Name</a> - Id: @business.Id 
 
-          @{ List<Order> specificOrders = Order.GetOrders();
-          <li>Current Number of Orders: @specificOrders.Count</li>
-          }
-          </ul>
-      </div>
-
-          <!-- 05/21/22: Use C# in the HTML doc, use methods to grab lists, use loop to write each item in their own div below-->
-@* 
-                  @{ 
-
-                    @foreach(Order item in specificOrders)
-                    {
-
-                      @if (item.VendorId == business.Id)
-                      {
-                        <div class="ordersUnderVendor" style="margin-bottom: 3px;">
-                          <li>Order name: @item.Name, Order ID: @item.Id</li>
-                        </div>
-                      }
-                    }
-                  } *@
-              
-      }
-        </ul>
-      </div>
+              @{ List<Order> specificOrders = Order.GetOrders();
+              <li style="margin-left: 2rem;">Current Number of Orders: @specificOrders.Count</li>
+              }
+              </li>
+          </div>              
+        }
+    </ul>
+    </div>
 
   <div class="spacer" style="height: 20px"></div>
 
-  <a href="/orders"><button>Go To Orders Page</button></a>
   <a href="/vendors/new"><button class="newV">Add new vendor</button></a>
+  <a href="/orders"><button>Go To Orders Page</button></a>
   <a href="/"><button class="home">Home</button></a>
 }
 </body>
