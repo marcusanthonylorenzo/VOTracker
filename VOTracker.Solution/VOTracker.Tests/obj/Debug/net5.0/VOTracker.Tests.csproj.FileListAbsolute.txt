@@ -110,3 +110,5 @@ C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker.Tests\obj\Debug\n
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker.Tests\obj\Debug\net5.0\VOTracker.Tests.pdb
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker.Tests\obj\Debug\net5.0\VOTracker.Tests.genruntimeconfig.cache
 C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker.Tests\obj\Debug\net5.0\ref\VOTracker.Tests.dll
+C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker.Tests\bin\Debug\net5.0\VOTracker.Tests.StaticWebAssets.xml
+C:\Users\Marcus\Desktop\VOTracker\VOTracker.Solution\VOTracker.Tests\obj\Debug\net5.0\staticwebassets\VOTracker.Tests.StaticWebAssets.xml

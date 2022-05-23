@@ -24,7 +24,11 @@
 }
 else
 { 
-    <div class="vendorsDisplay">
+    <div class="vendorsDisplay" style="
+        height: 40vh;
+        width: 60vw;
+        overflow: auto;
+    ">
     <ul>
         @foreach(Vendor business in Model)
         {
