@@ -12,6 +12,7 @@
 - If there are no orders, there is a notification.
 - Once there are orders, it will reference the vendor which was chosen, and a link routing them to the vendors individual page.
 - Equally, vendors show a list of orders that have been requested.
+- Links of vendors/orders on both sides to check for reference.
 - There is no delete function as it is not MVP, as I chose to focus on linear styling/access than add new functions.
 
 
