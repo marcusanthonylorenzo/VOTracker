@@ -40,7 +40,8 @@ A barebones order tracking system that needs more styling, but allows both order
 | Open Git Bash or Terminal and type: `cd desktop` 
 | Next, clone `[https://github.com/marcusanthonylorenzo/](https://github.com/marcusanthonylorenzo/VOTracker)` 
 | Once completed, open this new directory in your text editor
-| To run, in your terminal type `dotnet build`, enter, then type `dotnet watch run`, enter.
+| To run, in your terminal type `cd VOTracker.Solution/VOTracker`.
+| Next, type `dotnet build`, press enter, then type `dotnet watch run`, enter.
 | View on LocalHost:5000 or 5001
 
 
